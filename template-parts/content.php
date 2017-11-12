@@ -33,52 +33,52 @@
     ?>
 <?php if ( $image_1 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_1, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_1, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_2 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_2, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_2, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_3 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_3, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_3, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_4 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_4, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_4, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_5 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_5, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_5, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_6 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_6, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_6, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_7 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_7, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_7, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_8 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_8, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_8, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_9 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_9, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_9, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 <?php if ( $image_10 ) { ?>
 <figure>
-    <?php echo wp_get_attachment_image( $image_10, 'full' ); ?>
+    <?php echo wp_get_attachment_image( $image_10, 'item-image-huge' ); ?>
 </figure>
 <?php } ?>            
 
@@ -95,8 +95,6 @@
                 //'in_same_term' => true,
                 //'taxonomy' => 'category',
             ));
-    		
-    		
-    		minus_plus_est_entry_footer(); ?>
+        ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

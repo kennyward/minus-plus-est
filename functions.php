@@ -124,6 +124,10 @@ function minus_plus_est_scripts() {
 	wp_enqueue_script( 'stickykit-js', get_template_directory_uri() . '/js/sticky-kit.min.js', array('jquery'), '20151215', true );
 
     wp_enqueue_script( 'fluidvids-js', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '20151215', true );
+
+	if ( ! is_admin() && is_singular() ) {
+		wp_enqueue_script( 'chocolat-js', get_template_directory_uri() . '/js/chocolat.min.js', array('jquery'), '20151215', true );
+	}    
 	
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '20151215', true );
 
@@ -248,10 +252,11 @@ function gs_change_attachment_image_markup($attributes){
 // add custom image sizes for theme
 
 
-//add_image_size( 'articlePortrait', 696, 928, true ); 
-add_image_size( 'item-image', 880, 9999, false );
-
-
+//add_image_size( 'articlePortrait', 696, 928, true );
+add_image_size( 'item-image-small', 600, 9999, false );
+add_image_size( 'item-image-med', 900, 9999, false );
+add_image_size( 'item-image-large', 1200, 9999, false );
+add_image_size( 'item-image-huge', 1700, 9999, false );
 
 // options page
 

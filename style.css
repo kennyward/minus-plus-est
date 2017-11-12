@@ -601,12 +601,14 @@ a:hover, a:active {
 }
 
 .site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
+.posts-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
-
+ .site-main
+.post-navigation{
+    margin-bottom: 0;
+}
 .nav-links{
     display: flex;
     width: 100%;
@@ -757,7 +759,7 @@ a:hover, a:active {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 
 .updated:not(.published) {
@@ -1056,22 +1058,23 @@ a.view-all-items:hover{
 }
 
 .item-images figure{
- display: block;
- position: relative;
- height: 0;
-  padding-bottom: 55.3%;
-    margin-bottom: 40px;  
+    display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 55.3%;
+    margin-bottom: 60px;  
 }
+
 .item-images figure img{
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
 }
+
 .item-images img{
     display: block;
-
     width: 100%;
     height: 100%;
 }
