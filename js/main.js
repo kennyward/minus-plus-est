@@ -45,3 +45,15 @@ jQuery(document).ready(function(){
 jQuery( window ).ready(function() {
     jQuery(".item-video").fitVids();
 });
+
+
+// chocolat.js - popup gallery on portfolio item pages
+jQuery(document).ready(function(){
+    jQuery('.item-images').Chocolat({
+        imageSelector:'.open-viewer',
+        enableZoom:false
+    });
+    jQuery( ".next-image" ).click(function() {
+         jQuery('.item-images').api().next();
+    });
+});

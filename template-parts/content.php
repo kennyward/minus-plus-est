@@ -17,70 +17,24 @@
         </div>
 <?php endif; ?>
         <div class="item-images">
+         
+    <?php 
+    $args = array( 'post_type' => 'attachment', 'numberposts' => 10, 'post_status' => 'any', 'orderby' => 'menu_order', 'post_parent' => $post->ID );
+    $attachments = get_posts( $args );
+    if ( $attachments ) {
+        foreach ( $attachments as $attachment ) {
+            $image_attributes = wp_get_attachment_image_src( $attachment->ID, 'full' );
+            echo '<figure><a class="open-viewer" href="';
+            echo $image_attributes[0];
+            echo '">';
+            echo wp_get_attachment_image( $attachment->ID, 'item-image-huge' );
+            echo '</a></figure>'; ?>
+        <?php } ?>
+
+    <?php } ?>         
+         
             
-            
-<?php
-    $image_1 = get_field( 'image_1' );
-    $image_2 = get_field( 'image_2' );
-    $image_3 = get_field( 'image_3' );
-    $image_4 = get_field( 'image_4' );
-    $image_5 = get_field( 'image_5' );
-    $image_6 = get_field( 'image_6' );
-    $image_7 = get_field( 'image_7' );
-    $image_8 = get_field( 'image_8' );
-    $image_9 = get_field( 'image_9' );
-    $image_10 = get_field( 'image_10' );
-    ?>
-<?php if ( $image_1 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_1, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_2 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_2, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_3 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_3, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_4 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_4, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_5 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_5, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_6 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_6, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_7 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_7, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_8 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_8, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_9 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_9, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
-<?php if ( $image_10 ) { ?>
-<figure>
-    <?php echo wp_get_attachment_image( $image_10, 'item-image-huge' ); ?>
-</figure>
-<?php } ?>            
+         
 
         </div>
 
