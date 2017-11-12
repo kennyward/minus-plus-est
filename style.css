@@ -1,0 +1,1151 @@
+/*!
+Theme Name: Minus Plus Est
+Theme URI: http://kennyward.co.uk/minus-plus-est
+Author: Kenny Ward
+Author URI: http://kennyward.co.uk
+Description: A minimal portfolio theme for digital creatives
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: minus-plus-est
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, no-sidebar
+
+This theme, like WordPress, is licensed under the GPL.
+
+Minus Plus Est is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+/* fade in content on load */
+#page {-webkit-animation:fadein 0.5s; animation:fadein 0.5s; }
+@-webkit-keyframes fadein {
+    from {opacity:0} to {opacity:1} 
+}
+@keyframes fadein { 
+    from {opacity:0} to {opacity:1} 
+}
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: 600;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: 600;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: grey;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 11px;
+	line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: 600;
+	color: #2b2b2b;
+	letter-spacing: 1px;
+}
+
+h1{
+    font-size: 13px;
+}
+h2{
+    font-size: 12px;
+}
+h3, h4, h5{
+    font-size: 11px;
+}
+
+h1.site-title, p.site-title{
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+p {
+	margin-bottom: 30px;
+	font-weight: 300;
+	font-size: 11px;
+	line-height: 1.7;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #f4f4f4;
+	/* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 10px 0 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+li{
+    line-height: 2;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: grey;
+	background: grey;
+	color: white;
+	font-size: 11px;
+	line-height: 1;
+	padding: 10px;
+
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	
+	
+	
+}
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: #2b2b2b;
+	text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+	color: #2b2b2b;
+	outline: thin dotted;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+
+}
+
+.main-navigation ul {
+
+
+}
+
+.main-navigation ul ul {
+
+
+}
+
+.main-navigation ul ul ul {
+
+
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+
+
+}
+
+.main-navigation ul ul a {
+
+
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+
+
+}
+
+.main-navigation li {
+
+
+}
+
+.main-navigation a {
+
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+
+	}
+	.main-navigation ul {
+
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.nav-links{
+    display: flex;
+    width: 100%;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Images
+--------------------------------------------------------------*/
+
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 500ms;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 600;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+
+
+#page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#masthead{
+    width: 25vw;
+    padding: 40px 0 0 40px;
+}
+
+#content{
+    width: 75vw;
+    max-width: 2560px;
+}
+
+
+#main{
+    min-height: calc(100vh - 40px);
+    padding: 40px;      
+}
+#colophon{
+    position: fixed;
+    left: 40px;
+    bottom: 40px;
+}
+
+.site-branding{
+
+
+}
+
+/*--------------------------------------------------------------
+## Portfolio navigation
+--------------------------------------------------------------*/
+
+.portfolio-navigation{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-navigation nav{
+    width: 33.33%;
+    margin-bottom: 40px;
+}
+
+.portfolio-navigation aside{
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.portfolio-navigation aside p{
+    max-width: 400px;
+    line-height: 1.6;
+    margin-top: 0;    
+}
+
+.portfolio-navigation h2{
+    margin-top: 0;
+}
+
+.portfolio-navigation h3{
+    margin-top: 0;
+}
+
+.portfolio-navigation ul{
+    padding: 0;
+}
+
+.portfolio-navigation li{
+
+}
+
+.portfolio-navigation li a{
+    color: grey;
+    font-size: 11px;
+}
+
+.portfolio-navigation li a:hover{
+    color: #2b2b2b;    
+}
+
+.portfolio-navigation nav.other-links{
+    width: 100%;
+}
+
+a.view-all-items{
+    display: block;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #2b2b2b;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+a.view-all-items:hover{
+    color: grey;    
+}
+
+.other-links ul{
+    display: flex;
+}
+
+.other-links li{
+    margin-right: 10px;
+}
+
+/*--------------------------------------------------------------
+## Portfolio archive page
+--------------------------------------------------------------*/
+
+.portfolio-archive-page{
+    
+}
+
+.portfolio-archive-page ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-archive-page li{
+    width: 33.33%;
+    margin-bottom: 5px;
+
+}
+
+.portfolio-archive-page h1{
+    margin-top: 0;
+}
+
+.portfolio-archive-page li a{
+    color: grey;
+    padding: 4px 0;    
+}
+
+.portfolio-archive-page li a:hover{
+    color: #2b2b2b;
+}   
+
+/*--------------------------------------------------------------
+# Single portfolio item page
+--------------------------------------------------------------*/
+
+.entry-header p{
+    max-width: 400px;
+}
+
+.item-images{
+
+}
+
+.item-images figure{
+ display: block;
+ position: relative;
+ height: 0;
+  padding-bottom: 55.3%;
+    margin-bottom: 40px;  
+}
+.item-images figure img{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;    
+}
+.item-images img{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.content-area{
+    
+}
+
+.item-info{
+    margin-top: 60px;
+}
+
+.item-info p{
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+.item-info span{
+    padding-right: 40px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.item-info ul{
+
+}
+
+.item-info a{
+    font-size: 10px;
+    color: grey;
+}
+
+.item-info a:hover{
+    color: #2b2b2b;
+}
+
+h1.entry-title{
+    font-size: 11px;
+}
+
+.entry-content iframe{
+
+}
+
+.item-video{
+    margin-bottom: 40px;    
+}
+
+
+/*--------------------------------------------------------------
+## 404
+--------------------------------------------------------------*/
+
+.not-found h1{
+    margin:0 auto 10px;
+}
+
+.not-found p{
+    margin-top: 0;
+}
+
+.not-found .page-content{
+    margin: 0;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+a.send-email{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 11px;    
+}
+a.send-email:hover{
+    color: grey;   
+}
