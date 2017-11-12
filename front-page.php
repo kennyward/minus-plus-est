@@ -10,10 +10,16 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
             <div class="portfolio-navigation">
+      
+    <?php          
+        $customSubtitle = get_option('mpe_settings')['mpe_text_field_0'];
+         if (empty($customSubtitle)) { ?>
+         <?php } else { ?>
                 <aside>
                     <h2><?php echo get_option('mpe_settings')['mpe_text_field_0']; ?></h2>
                     <p><?php echo get_option('mpe_settings')['mpe_textarea_field_1']; ?></p>
                 </aside>
+    <?php } ?>      
 <?php
 
 $custom_terms = get_terms('category');
@@ -51,13 +57,13 @@ foreach($custom_terms as $custom_term) {
                     <h2>More</h2>
                     <ul>
                         <li>
-                            <a href="#"><?php echo get_option('mpe_settings')['mpe_text_field_2']; ?></a>
+                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_2']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_2'] ); ?></a>
                         </li>
                         <li>
-                            <a href="#"><?php echo get_option('mpe_settings')['mpe_text_field_3']; ?></a>
+                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_3']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_3'] ); ?></a>
                         </li>
                         <li>
-                            <a href="#"><?php echo get_option('mpe_settings')['mpe_text_field_4']; ?></a>
+                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_4']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_4'] ); ?></a>
                         </li>
                     </ul>
                 </nav>
