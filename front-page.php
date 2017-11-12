@@ -11,8 +11,8 @@ get_header(); ?>
 		<main id="main" class="site-main">
             <div class="portfolio-navigation">
                 <aside>
-                    <h2>Lorem ispum dolar</h2><?php  $theme_options = get_option( 'theme_option_name' ); $homepage_title_0 = $theme_options['homepage_title_0']; ?>
-                    <p>Duis consequat consequat lorem eu pulvinar. Nullam hendrerit tortor augue, ut euismod eros facilisis ut. Duis posuere urna nec gravida ornare. Cras dignissim, odio at varius rutrum, lacus odio fringilla nisa.</p>
+                    <h2><?php echo get_option('mpe_settings')['mpe_text_field_0']; ?></h2>
+                    <p><?php echo get_option('mpe_settings')['mpe_textarea_field_1']; ?></p>
                 </aside>
 <?php
 
@@ -51,13 +51,13 @@ foreach($custom_terms as $custom_term) {
                     <h2>More</h2>
                     <ul>
                         <li>
-                            <a href="#">Github</a>
+                            <a href="#"><?php echo get_option('mpe_settings')['mpe_text_field_2']; ?></a>
                         </li>
                         <li>
-                            <a href="#">Twitter</a>
+                            <a href="#"><?php echo get_option('mpe_settings')['mpe_text_field_3']; ?></a>
                         </li>
                         <li>
-                            <a href="#">Slack</a>
+                            <a href="#"><?php echo get_option('mpe_settings')['mpe_text_field_4']; ?></a>
                         </li>
                     </ul>
                 </nav>

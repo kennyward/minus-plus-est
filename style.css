@@ -1023,7 +1023,7 @@ a.view-all-items:hover{
 }
 
 .portfolio-archive-page li{
-    width: 33.33%;
+    width: 25%;
     margin-bottom: 5px;
 
 }
@@ -1149,3 +1149,58 @@ a.send-email{
 a.send-email:hover{
     color: grey;   
 }
+
+/*--------------------------------------------------------------
+## Media Queries
+--------------------------------------------------------------*/
+
+@media (max-width: 900px) {
+    #masthead {
+        width: 100%;
+        z-index: 1;
+    }  
+    #content {
+        width: 100%;
+    }
+    .item-info p {
+        max-width: 400px;
+    }
+    .site-title{
+        position: fixed;
+        top: 40px;
+        left: 40px;
+    }
+    .site-description{
+        margin-top: 30px;
+        z-index: 1;
+        position: relative;
+    }
+    #colophon {
+        position: fixed;
+        left: auto;
+        bottom: auto;
+        top: 40px;
+        right:40px;
+    }    
+}
+
+@media (max-width: 600px) {
+    #masthead {
+        padding: 30px;
+    }
+    #main {
+        min-height: calc(100vh - 30px);
+        padding: 30px;
+    }     
+    .portfolio-navigation nav {
+        width: 50%;
+    }
+    .site-title{
+        top: 30px;
+        left: 30px;
+    }
+    #colophon {
+        top: 30px;
+        right:30px;
+    }      
+}    

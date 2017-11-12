@@ -1,12 +1,47 @@
-// font loader
 
 
+var $stickyHeader = jQuery(".content-area");
 
-// sticky kit
-jQuery(".content-area").stick_in_parent({ // stick site-branding in position
-    'offset_top':40, //offset top by 40px
+
+// stickykit
+jQuery(document).ready(function(){
+
+
+    var window_width = jQuery( window ).width();
+
+    if (window_width < 900) {
+        
+      $stickyHeader.trigger("sticky_kit:detach");
+
+      
+    } else {
+      make_sticky();
+    }
+
+    jQuery( window ).resize(function() {
+
+      window_width = jQuery( window ).width();
+
+      if (window_width < 900) {
+          
+        $stickyHeader.trigger("sticky_kit:detach");
+        
+      } else {
+        make_sticky();
+      }
+
+    });
+
+    function make_sticky() {
+        $stickyHeader.stick_in_parent({ // stick site-branding in position
+             'offset_top':40, //offset top by 40px
+        });
+    }
+
 });
 
+
+// fitvids
 jQuery( window ).ready(function() {
     jQuery(".item-video").fitVids();
 });
