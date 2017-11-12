@@ -1198,7 +1198,7 @@ a.send-email:hover{
     margin-left:-16px;
     margin-top:-16px;
     z-index:11;
-    background:url(../images/loader.gif);
+    background:url(images/loader.gif);
     display:none;
 }
 .chocolat-content{
@@ -1224,7 +1224,8 @@ a.send-email:hover{
     top: 50%;
     margin-top: -50px;
     cursor:pointer;
-    background:url(../images/left.png) 50% 50% no-repeat;
+    background:url(images/left.png) 50% 50% no-repeat;
+    background-size: 20px 20px;
     z-index: 17;
     display: none;
 
@@ -1237,7 +1238,8 @@ a.send-email:hover{
     top: 50%;
     margin-top: -50px;
     cursor:pointer;
-    background:url(../images/right.png)  50% 50% no-repeat;
+    background:url(images/right.png)  50% 50% no-repeat;
+    background-size: 20px 20px;    
     z-index: 17;
     display: none;
 }
@@ -1265,7 +1267,7 @@ a.send-email:hover{
     position: absolute;
     top: 0;
     right: 0;
-    background:url(../images/close.png) 50% 50% no-repeat;
+    background:url(images/close.png) 50% 50% no-repeat;
 }
 .chocolat-wrapper .chocolat-bottom{
     position:absolute;
@@ -1299,7 +1301,7 @@ a.send-email:hover{
 .chocolat-wrapper .chocolat-fullscreen{
     width: 16px;
     height: 40px;
-    background: url(../images/fullscreen.png) 50% 50% no-repeat;
+    background: url(images/fullscreen.png) 50% 50% no-repeat;
     display: block;
     margin:auto;
     cursor: pointer;
@@ -1330,25 +1332,6 @@ body.chocolat-open>.chocolat-content{
 .chocolat-in-container{
     position: relative;
 }
-
-/* uncomment to hide controls when zoomed-in*/
-/*
-.chocolat-zoomable .chocolat-top,
-.chocolat-zoomable .chocolat-bottom,
-.chocolat-zoomable .chocolat-right,
-.chocolat-zoomable .chocolat-left {
-    transition: opacity .3s ease, visibility 0s .3s;
-   opacity: 1;
-}
-
-.chocolat-zoomable.chocolat-zoomed .chocolat-top,
-.chocolat-zoomable.chocolat-zoomed .chocolat-bottom,
-.chocolat-zoomable.chocolat-zoomed .chocolat-right,
-.chocolat-zoomable.chocolat-zoomed .chocolat-left {
-    visibility: hidden;
-    opacity: 0;
-}
-*/
 
 
 /*--------------------------------------------------------------
