@@ -14,6 +14,3 @@ Showcase text, photography and video content.
 
 Add a short subtitle and introduction text on the homepage.
 
-## Demo
-
-http://kennyward.co.uk/mpe
