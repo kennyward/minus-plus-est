@@ -940,11 +940,13 @@ object {
 .portfolio-navigation{
     display: flex;
     flex-wrap: wrap;
+    max-width: 1000px;
 }
 
 .portfolio-navigation nav{
     width: 33.33%;
     margin-bottom: 40px;
+    padding-right: 40px;
 }
 
 .portfolio-navigation aside{
@@ -1181,7 +1183,10 @@ a.send-email:hover{
         bottom: auto;
         top: 40px;
         right:40px;
-    }    
+    }
+    .portfolio-archive-page li{
+        width: 33.33%;
+    }      
 }
 
 @media (max-width: 600px) {
@@ -1202,5 +1207,11 @@ a.send-email:hover{
     #colophon {
         top: 30px;
         right:30px;
-    }      
-}    
+    }
+    .portfolio-archive-page li{
+        width: 50%;
+    }
+    .portfolio-navigation nav{
+        padding-right: 20px;
+    }           
+}
