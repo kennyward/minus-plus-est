@@ -19,42 +19,28 @@
         <div class="item-images">
 
     <?php
-        
-    // args    
-    $sizeFull = 'full'; // full size image
-    $sizeHuge = 'item-image-huge'; // scaled image
-    
-
-    
-    
-    $images = array(); // img array
-    
-    
-    
-    for($x = 1; $x <= 10; $x++) { 
-        
-            $img = get_field('image_' . $x);
-            $image_array = wp_get_attachment_image_src($img, $sizeFull);
-            $link = $image_array[0];                
-    
-       if($img) {
-           
-            $images[] = $img; 
-                 
-       } else {
-           
-            break;
             
-       }
-       
-     }
+$images = array();
+for($x = 1; $x <= 10; $x++) { 
+    $img = get_field('image_' . $x);
+    if($img) {
+        $fullsize_image = wp_get_attachment_image_src($img, 'full');
+        ?>
+        <figure>
+            <a href="<?php echo $fullsize_image[0]; ?>" class="open-viewer">
+                <?php echo wp_get_attachment_image($img, 'item-image-huge'); ?>
+            </a>
+        </figure>
+        <?php
+    }
+}
     
      ?>
 
     <?php foreach($images as $image) { ?>
     
             <figure>
-                <a href="<?php echo $link; ?>" class="open-viewer">
+                <a href="<?php echo $image; ?>" class="open-viewer">
                     <?php echo wp_get_attachment_image( $image, $sizeHuge ); ?>
                 </a>
             </figure>
@@ -63,6 +49,15 @@
 
 
         </div>
+
+
+
+<?php if( get_field('item_text') ): // only show video element if Vimeo ID present ?>
+        <div class="item-text">
+            <?php the_field('item_text'); ?>
+        </div>
+<?php endif; ?>
+            
 
 	</div><!-- .entry-content -->
 

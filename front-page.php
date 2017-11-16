@@ -13,8 +13,7 @@ get_header(); ?>
       
     <?php          
         $customSubtitle = get_option('mpe_settings')['mpe_text_field_0'];
-         if (empty($customSubtitle)) { ?>
-         <?php } else { ?>
+         if (empty($customSubtitle)) {} else { ?>
                 <aside>
                     <h2><?php echo get_option('mpe_settings')['mpe_text_field_0']; ?></h2>
                     <p><?php echo get_option('mpe_settings')['mpe_textarea_field_1']; ?></p>
@@ -57,13 +56,13 @@ foreach($custom_terms as $custom_term) {
                     <h2>More</h2>
                     <ul>
                         <li>
-                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_2']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_2'] ); ?></a>
+                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_2']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_3'] ); ?></a>
                         </li>
                         <li>
-                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_3']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_3'] ); ?></a>
+                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_4']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_5'] ); ?></a>
                         </li>
                         <li>
-                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_4']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_4'] ); ?></a>
+                            <a href="<?php echo get_option('mpe_settings')['mpe_text_field_6']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_7'] ); ?></a>
                         </li>
                     </ul>
                 </nav>

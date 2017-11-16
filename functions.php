@@ -273,15 +273,15 @@ add_image_size( 'item-image-med', 900, 9999, false );
 add_image_size( 'item-image-large', 1200, 9999, false );
 add_image_size( 'item-image-huge', 1700, 9999, false );
 
-// options page
 
+// theme options
 add_action( 'admin_menu', 'mpe_add_admin_menu' );
 add_action( 'admin_init', 'mpe_settings_init' );
 
 
 function mpe_add_admin_menu(  ) { 
 
-	add_options_page( 'minus-plus-est', 'minus-plus-est', 'manage_options', 'minus-plus-est', 'mpe_options_page' );
+	add_options_page( 'Minus Plus Est', 'Minus Plus Est', 'manage_options', 'minus_plus_est', 'mpe_options_page' );
 
 }
 
@@ -299,7 +299,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_0', 
-		__( 'Homepage subtitle', 'minus-plus-est' ), 
+		__( 'Settings field description', 'minus-plus-est' ), 
 		'mpe_text_field_0_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -307,7 +307,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_textarea_field_1', 
-		__( 'Homepage text', 'minus-plus-est' ), 
+		__( 'Settings field description', 'minus-plus-est' ), 
 		'mpe_textarea_field_1_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -315,7 +315,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_2', 
-		__( 'External URL 1', 'minus-plus-est' ), 
+		__( 'Settings field description', 'minus-plus-est' ), 
 		'mpe_text_field_2_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -323,7 +323,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_3', 
-		__( 'External URL 2', 'minus-plus-est' ), 
+		__( 'Settings field description', 'minus-plus-est' ), 
 		'mpe_text_field_3_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -331,7 +331,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_4', 
-		__( 'External URL 3', 'minus-plus-est' ), 
+		__( 'Settings field description', 'minus-plus-est' ), 
 		'mpe_text_field_4_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -339,8 +339,32 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_5', 
-		__( 'Contact link email address', 'minus-plus-est' ), 
+		__( 'Settings field description', 'minus-plus-est' ), 
 		'mpe_text_field_5_render', 
+		'pluginPage', 
+		'mpe_pluginPage_section' 
+	);
+
+	add_settings_field( 
+		'mpe_text_field_6', 
+		__( 'Settings field description', 'minus-plus-est' ), 
+		'mpe_text_field_6_render', 
+		'pluginPage', 
+		'mpe_pluginPage_section' 
+	);
+
+	add_settings_field( 
+		'mpe_text_field_7', 
+		__( 'Settings field description', 'minus-plus-est' ), 
+		'mpe_text_field_7_render', 
+		'pluginPage', 
+		'mpe_pluginPage_section' 
+	);
+
+	add_settings_field( 
+		'mpe_text_field_8', 
+		__( 'Settings field description', 'minus-plus-est' ), 
+		'mpe_text_field_8_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
 	);
@@ -409,6 +433,36 @@ function mpe_text_field_5_render(  ) {
 }
 
 
+function mpe_text_field_6_render(  ) { 
+
+	$options = get_option( 'mpe_settings' );
+	?>
+	<input type='text' name='mpe_settings[mpe_text_field_6]' value='<?php echo $options['mpe_text_field_6']; ?>'>
+	<?php
+
+}
+
+
+function mpe_text_field_7_render(  ) { 
+
+	$options = get_option( 'mpe_settings' );
+	?>
+	<input type='text' name='mpe_settings[mpe_text_field_7]' value='<?php echo $options['mpe_text_field_7']; ?>'>
+	<?php
+
+}
+
+
+function mpe_text_field_8_render(  ) { 
+
+	$options = get_option( 'mpe_settings' );
+	?>
+	<input type='text' name='mpe_settings[mpe_text_field_8]' value='<?php echo $options['mpe_text_field_8']; ?>'>
+	<?php
+
+}
+
+
 function mpe_settings_section_callback(  ) { 
 
 	echo __( 'This section description', 'minus-plus-est' );
@@ -421,7 +475,7 @@ function mpe_options_page(  ) {
 	?>
 	<form action='options.php' method='post'>
 
-		<h2>minus-plus-est</h2>
+		<h2>Minus Plus Est</h2>
 
 		<?php
 		settings_fields( 'pluginPage' );

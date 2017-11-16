@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-            <a href="mailto:<?php echo get_option('mpe_settings')['mpe_text_field_5']; ?>" class="send-email">Contact</a>
+            <a href="mailto:<?php echo get_option('mpe_settings')['mpe_text_field_8']; ?>" class="send-email">Contact</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
