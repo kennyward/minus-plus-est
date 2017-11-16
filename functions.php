@@ -121,6 +121,8 @@ function minus_plus_est_scripts() {
 		
 	wp_enqueue_script( 'lazysizes-js', get_template_directory_uri() . '/js/lazysizes.min.js', array('jquery'), '20151215', true );
 	
+	wp_enqueue_script( 'imagesloaded-js', get_template_directory_uri() . '/js/imagesloaded.min.js', array('jquery'), '20151215', true );
+	
 	wp_enqueue_script( 'stickykit-js', get_template_directory_uri() . '/js/sticky-kit.min.js', array('jquery'), '20151215', true );
 
     wp_enqueue_script( 'fluidvids-js', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '20151215', true );
@@ -226,6 +228,10 @@ function custom_post_type() {
 */
  
 add_action( 'init', 'custom_post_type', 0 );
+
+
+
+
  
  // change markup of responsize images for lazysizes.js
  add_filter( 'wp_get_attachment_image_attributes', 'gs_change_attachment_image_markup' );
@@ -237,17 +243,26 @@ add_action( 'init', 'custom_post_type', 0 );
 function gs_change_attachment_image_markup($attributes){
 
     if (isset($attributes['src'])) {
+        
         $attributes['data-src'] = $attributes['src'];
         $attributes['src']      = ''; //could add default small image or a base64 encoded small image here
+        
     }
+    
     if (isset($attributes['srcset'])) {
+        
         $attributes['data-srcset'] = $attributes['srcset'];
         $attributes['srcset'] = '';
+        
     }
+    
     $attributes['class'] .= ' lazyload';
     return $attributes;
 
 }
+
+
+
 
 // add custom image sizes for theme
 

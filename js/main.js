@@ -53,7 +53,23 @@ jQuery(document).ready(function(){
         imageSelector:'.open-viewer',
         enableZoom:false
     });
-    jQuery( ".next-image" ).click(function() {
-         jQuery('.item-images').api().next();
-    });
+});
+
+
+// identify image orentation for portfolio item gallery
+jQuery('.item-images').imagesLoaded( {
+  // options...
+  },
+  function() {
+  // images are loaded
+  
+  }
+);
+
+
+
+
+
+jQuery(document).on('lazyloaded', function(){
+    
 });

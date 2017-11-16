@@ -17,24 +17,50 @@
         </div>
 <?php endif; ?>
         <div class="item-images">
-         
-    <?php 
-    $args = array( 'post_type' => 'attachment', 'numberposts' => 10, 'post_status' => 'any', 'orderby' => 'menu_order', 'post_parent' => $post->ID );
-    $attachments = get_posts( $args );
-    if ( $attachments ) {
-        foreach ( $attachments as $attachment ) {
-            $image_attributes = wp_get_attachment_image_src( $attachment->ID, 'full' );
-            echo '<figure><a class="open-viewer" href="';
-            echo $image_attributes[0];
-            echo '">';
-            echo wp_get_attachment_image( $attachment->ID, 'item-image-huge' );
-            echo '</a></figure>'; ?>
-        <?php } ?>
 
-    <?php } ?>         
-         
+    <?php
+        
+    // args    
+    $sizeFull = 'full'; // full size image
+    $sizeHuge = 'item-image-huge'; // scaled image
+    
+
+    
+    
+    $images = array(); // img array
+    
+    
+    
+    for($x = 1; $x <= 10; $x++) { 
+        
+            $img = get_field('image_' . $x);
+            $image_array = wp_get_attachment_image_src($img, $sizeFull);
+            $link = $image_array[0];                
+    
+       if($img) {
+           
+            $images[] = $img; 
+                 
+       } else {
+           
+            break;
             
-         
+       }
+       
+     }
+    
+     ?>
+
+    <?php foreach($images as $image) { ?>
+    
+            <figure>
+                <a href="<?php echo $link; ?>" class="open-viewer">
+                    <?php echo wp_get_attachment_image( $image, $sizeHuge ); ?>
+                </a>
+            </figure>
+    
+    <?php } ?>
+
 
         </div>
 
