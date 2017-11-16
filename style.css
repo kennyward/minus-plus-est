@@ -1007,10 +1007,12 @@ a.view-all-items:hover{
 
 .other-links ul{
 
+
 }
 
 .other-links li{
-    margin-right: 10px;
+
+
 }
 
 /*--------------------------------------------------------------
@@ -1178,7 +1180,7 @@ a.send-email:hover{
     left:0;
     top:0;
     z-index:10;
-    background-color:#fff;
+    background-color:#f4f4f4;
     display: none;
     opacity: 0.9;
 }
@@ -1286,7 +1288,7 @@ a.send-email:hover{
     z-index: 17;
     padding-left: 15px;
     padding-right: 15px;
-    background: rgba(250,250,250,1);
+    background: #f4f4f4;
     color: #2b2b2b;
     text-align: right;
     margin-top: 10px;

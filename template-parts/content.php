@@ -17,36 +17,25 @@
         </div>
 <?php endif; ?>
         <div class="item-images">
+<?php
 
-    <?php
-            
 $images = array();
 for($x = 1; $x <= 10; $x++) { 
     $img = get_field('image_' . $x);
     if($img) {
         $fullsize_image = wp_get_attachment_image_src($img, 'full');
         ?>
-        <figure>
-            <a href="<?php echo $fullsize_image[0]; ?>" class="open-viewer">
-                <?php echo wp_get_attachment_image($img, 'item-image-huge'); ?>
-            </a>
-        </figure>
+        
+            <figure>
+                <a href="<?php echo $fullsize_image[0]; ?>" class="open-viewer">
+                    <?php echo wp_get_attachment_image($img, 'item-image-huge'); ?>
+                </a>
+            </figure>
         <?php
     }
 }
     
-     ?>
-
-    <?php foreach($images as $image) { ?>
-    
-            <figure>
-                <a href="<?php echo $image; ?>" class="open-viewer">
-                    <?php echo wp_get_attachment_image( $image, $sizeHuge ); ?>
-                </a>
-            </figure>
-    
-    <?php } ?>
-
+?>
 
         </div>
 

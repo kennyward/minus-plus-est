@@ -299,7 +299,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_0', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Homepage Subtitle', 'minus-plus-est' ), 
 		'mpe_text_field_0_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -307,7 +307,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_textarea_field_1', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Homepage introduction', 'minus-plus-est' ), 
 		'mpe_textarea_field_1_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -315,7 +315,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_2', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Homepage Custom Link #1', 'minus-plus-est' ), 
 		'mpe_text_field_2_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -323,7 +323,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_3', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Homepage Custom Link #1 Text', 'minus-plus-est' ), 
 		'mpe_text_field_3_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -331,7 +331,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_4', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Homepage Custom Link #2', 'minus-plus-est' ), 
 		'mpe_text_field_4_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -339,7 +339,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_5', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Homepage Custom Link #2 Text', 'minus-plus-est' ), 
 		'mpe_text_field_5_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -347,7 +347,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_6', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Homepage Custom Link #3', 'minus-plus-est' ), 
 		'mpe_text_field_6_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -355,7 +355,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_7', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Homepage Custom Link #3 Text', 'minus-plus-est' ), 
 		'mpe_text_field_7_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
@@ -363,7 +363,7 @@ function mpe_settings_init(  ) {
 
 	add_settings_field( 
 		'mpe_text_field_8', 
-		__( 'Settings field description', 'minus-plus-est' ), 
+		__( 'Contact Email', 'minus-plus-est' ), 
 		'mpe_text_field_8_render', 
 		'pluginPage', 
 		'mpe_pluginPage_section' 
