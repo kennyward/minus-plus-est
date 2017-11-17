@@ -1,4 +1,4 @@
-# minus-plus-est
+# Minus Plus Est
 
 A minimal WordPress theme for digital creatives.
 
@@ -14,7 +14,7 @@ Showcase text, photography and video content.
 
 Add a short subtitle and introduction text on the homepage.
 
-### FAQs
+#### FAQs
 
 Q: Can I change the font?
 
