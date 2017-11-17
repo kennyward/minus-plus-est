@@ -17,7 +17,6 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title">All <?php echo post_type_archive_title( '', false ); ?> Items</h1>
-				<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 			</header><!-- .page-header -->
 
 			<?php

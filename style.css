@@ -303,6 +303,7 @@ h1.site-title, p.site-title{
     margin: 0 0 10px;
 }
 
+
 p {
 	margin-bottom: 30px;
 	font-weight: 300;
@@ -1060,15 +1061,15 @@ a.view-all-items:hover{
 
 }
 
-.item-images figure{
+.entry-content figure{
     display: block;
     position: relative;
     height: 0;
-    padding-bottom: 55.3%;
+    padding-bottom: 67%;
     margin-bottom: 60px;  
 }
 
-.item-images figure img{
+.entry-content figure img{
     position: absolute;
     top: 0;
     left: 0;
@@ -1077,8 +1078,13 @@ a.view-all-items:hover{
     display: block;   
 }
 
-.item-images figure img.portrait{
-    max-width: 50%;
+.entry-content figure img.portrait{
+    max-width: 48%;
+}
+
+.lead-image.portrait{
+    max-width: 48%;
+    margin-bottom: 30px;    
 }
 
 .item-images figure img.landscape{
@@ -1386,6 +1392,22 @@ body.chocolat-open>.chocolat-content{
 }
 
 @media (max-width: 600px) {
+    h1{
+        font-size: 14px;
+    }
+    h2{
+        font-size: 13px;
+    }
+    h3, h4, h5{
+        font-size: 12px;
+    }
+    
+    p {
+    	margin-bottom: 30px;
+    	font-weight: 300;
+    	font-size: 12px;
+    	line-height: 1.7;
+    }      
     #masthead {
         padding: 30px;
     }
@@ -1401,13 +1423,34 @@ body.chocolat-open>.chocolat-content{
         left: 30px;
     }
     #colophon {
-        top: 30px;
-        right:30px;
+        top: 32px;
+        right: 30px;
+        z-index: 1;
     }
     .portfolio-archive-page li{
         width: 50%;
     }
     .portfolio-navigation nav{
         padding-right: 20px;
-    }           
+    }
+    .portfolio-navigation li a {
+        font-size: 13px;
+    }    
+    .item-info{
+        margin-top: 40px;
+    }
+    #masthead{
+        padding-bottom: 0;
+    }
+    .entry-content figure{
+        margin-bottom: 40px;
+    }
+    .entry-content figure img.portrait{
+
+    }
+    
+    .lead-image.portrait{
+
+    }
+    
 }

@@ -127,8 +127,10 @@ function minus_plus_est_scripts() {
 
     wp_enqueue_script( 'fluidvids-js', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'), '20151215', true );
 
+    wp_enqueue_script( 'chocolat-js', get_template_directory_uri() . '/js/chocolat.min.js', array('jquery'), '20151215', true );
+
 	if ( ! is_admin() && is_singular() ) { // if single post and not admin page
-		wp_enqueue_script( 'chocolat-js', get_template_directory_uri() . '/js/chocolat.min.js', array('jquery'), '20151215', true );
+
 	}    
 	
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '20151215', true );

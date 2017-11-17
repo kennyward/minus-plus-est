@@ -70,6 +70,6 @@ jQuery('.item-images').imagesLoaded( {
 
 
 
-jQuery(document).on('lazyloaded', function(){
-    
+jQuery(document).on('lazybeforeunveil', function(){
+
 });

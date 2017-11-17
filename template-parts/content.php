@@ -12,21 +12,32 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
     	<header>
-    	
 <?php if( get_field('vimeo_video') ): // only show video element if Vimeo ID present ?>
             <div class="item-video">
     			<iframe id="item-video" class="lazyload" src="https://player.vimeo.com/video/<?php the_field('vimeo_video'); ?>?api=1&player_id=item-video&color=ffffff&byline=0&badge=0&portrait=0&title=0" width="880" height="494" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
 <?php endif; ?>
 
-<figure>
-    <?php the_post_thumbnail('item-image-huge'); ?>
-</figure>
+<?php if ( has_post_thumbnail() ) { ?>
+            <figure>
+<?php 
+// check orientation of the_post_thumbnail  
+$post_thumbnail_id = get_post_thumbnail_id();
+$imgmeta = wp_get_attachment_metadata( $post_thumbnail_id );
+if ($imgmeta['width'] > $imgmeta['height']) {
+    echo the_post_thumbnail('item-image-huge', array('class' => 'lead-image landscape'));
+} else {
+    echo the_post_thumbnail('item-image-huge', array('class' => 'lead-image portrait'));
+}      
+?>
 
-<?php if( get_field('article_text') ): // only show video element if Vimeo ID present ?>
-        <div class="item-text">
-            <?php the_field('article_text'); ?>
-        </div>
+            </figure>
+<?php } ?>
+
+<?php if( get_field('article_text') ): // only show intro if present ?>
+            <div class="item-text">
+                <?php the_field('article_text'); ?>
+            </div>
 <?php endif; ?>
 
 
@@ -35,6 +46,7 @@
         <div class="item-images">
 <?php
 
+// loop through portfolio item images
 
 $images = array();
 for($x = 1; $x <= 10; $x++) { 
@@ -82,8 +94,8 @@ for($x = 1; $x <= 10; $x++) {
 		<?php 
     		
             the_post_navigation(array(
-                'prev_text'=>__('&larr; Previous project'),
-                'next_text'=>__('Next project &rarr;'),
+                'prev_text'=>__('&larr; PREV'),
+                'next_text'=>__('NEXT &rarr;'),
                 //'in_same_term' => true,
                 //'taxonomy' => 'category',
             ));
