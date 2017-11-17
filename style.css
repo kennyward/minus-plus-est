@@ -300,6 +300,7 @@ h1.site-title, p.site-title{
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 600;
+    line-height: 1.7;
     margin: 0 0 10px;
 }
 
@@ -1066,7 +1067,8 @@ a.view-all-items:hover{
     position: relative;
     height: 0;
     padding-bottom: 67%;
-    margin-bottom: 60px;  
+    margin:0 auto 60px; 
+    
 }
 
 .entry-content figure img{
@@ -1079,12 +1081,11 @@ a.view-all-items:hover{
 }
 
 .entry-content figure img.portrait{
-    max-width: 48%;
+    max-width: 50%;
 }
 
 .lead-image.portrait{
-    max-width: 48%;
-    margin-bottom: 30px;    
+    max-width: 50%;  
 }
 
 .item-images figure img.landscape{

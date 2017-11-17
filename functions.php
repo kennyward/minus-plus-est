@@ -143,9 +143,9 @@ add_action( 'wp_enqueue_scripts', 'minus_plus_est_scripts' );
 
 /**
  * Implement the Custom Header feature.
+    require get_template_directory() . '/inc/custom-header.php';
  */
-require get_template_directory() . '/inc/custom-header.php';
-
+ 
 /**
  * Custom template tags for this theme.
  */
@@ -174,6 +174,9 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+// remove wp-generator (version notice)
+remove_action('wp_head', 'wp_generator');
 
 // custom post types
 function custom_post_type() {
@@ -274,6 +277,10 @@ add_image_size( 'item-image-small', 600, 9999, false );
 add_image_size( 'item-image-med', 900, 9999, false );
 add_image_size( 'item-image-large', 1200, 9999, false );
 add_image_size( 'item-image-huge', 1700, 9999, false );
+
+// open graph data
+
+
 
 
 // theme options

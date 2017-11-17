@@ -14,3 +14,13 @@ Showcase text, photography and video content.
 
 Add a short subtitle and introduction text on the homepage.
 
+## FAQs
+
+Q: Can I change the font?
+A: No.
+
+Q: Can I change the text colour?
+A: No.
+
+Q: Can I change any styling at all?
+A: No.

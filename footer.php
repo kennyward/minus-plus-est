@@ -22,7 +22,7 @@
 
 <?php wp_footer(); ?>
 <!--
-    Minus Plus Est - 
+    Minus Plus Est - A simple WordPress portfolio
     Designed and developed by Kenny Ward (http://kennyward.co.uk)
 -->
 </body>
