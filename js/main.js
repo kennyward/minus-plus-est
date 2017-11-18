@@ -71,5 +71,5 @@ jQuery('.item-images').imagesLoaded( {
 
 
 jQuery(document).on('lazybeforeunveil', function(){
-
+    jQuery('.entry-footer').fadeIn();
 });

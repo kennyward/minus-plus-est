@@ -141,6 +141,234 @@ function minus_plus_est_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'minus_plus_est_scripts' );
 
+
+// load ACF
+
+// 1. customize ACF path
+add_filter('acf/settings/path', 'my_acf_settings_path');
+ 
+function my_acf_settings_path( $path ) {
+ 
+    // update path
+    $path = get_stylesheet_directory() . 'inc/acf/';
+    
+    // return
+    return $path;
+    
+}
+
+// 2. customize ACF dir
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+ 
+function my_acf_settings_dir( $dir ) {
+ 
+    // update path
+    $dir = get_stylesheet_directory_uri() . '/inc/acf/';
+    
+    // return
+    return $dir;
+    
+}
+
+// 3. Hide ACF field group menu item
+add_filter('acf/settings/show_admin', '__return_false');
+
+
+// 4. Include ACF
+include_once( get_stylesheet_directory() . '/inc/acf/acf.php' );
+
+// create ACF values
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_portfolio-item',
+		'title' => 'Portfolio Item',
+		'fields' => array (
+			array (
+				'key' => 'field_5a062fe54ac4c',
+				'label' => 'Subtitle',
+				'name' => 'subtitle',
+				'type' => 'text',
+				'instructions' => 'Enter a subtitle for the portfolio item',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5a065340935c5',
+				'label' => 'About text',
+				'name' => 'about_text',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
+			),
+			array (
+				'key' => 'field_5a066318061de',
+				'label' => 'Project URL',
+				'name' => 'project_url',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5a0663eb26070',
+				'label' => 'Project URL text',
+				'name' => 'project_url_text',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5a0664f44797b',
+				'label' => 'Vimeo Video',
+				'name' => 'vimeo_video',
+				'type' => 'text',
+				'instructions' => 'Enter the ID of the video, e.g 35396305',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5a0e073f1ca21',
+				'label' => 'Article Text',
+				'name' => 'article_text',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'no',
+			),
+			array (
+				'key' => 'field_5a06536c935c6',
+				'label' => 'Image 1',
+				'name' => 'image_1',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a0653a1935c7',
+				'label' => 'Image 2',
+				'name' => 'image_2',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a0653b1935c8',
+				'label' => 'Image 3',
+				'name' => 'image_3',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a073b089d19b',
+				'label' => 'Image 4',
+				'name' => 'image_4',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a073b1c9d19c',
+				'label' => 'Image 5',
+				'name' => 'image_5',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a073b2a9d19d',
+				'label' => 'Image 6',
+				'name' => 'image_6',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a073b389d19e',
+				'label' => 'Image 7',
+				'name' => 'image_7',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a073b4f9d19f',
+				'label' => 'Image 8',
+				'name' => 'image_8',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a073b5a9d1a0',
+				'label' => 'Image 9',
+				'name' => 'image_9',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5a073b659d1a1',
+				'label' => 'Image 10',
+				'name' => 'image_10',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'portfolio',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+
 /**
  * Implement the Custom Header feature.
     require get_template_directory() . '/inc/custom-header.php';

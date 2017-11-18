@@ -45,7 +45,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 /* fade in content on load */
-#page {-webkit-animation:fadein 0.5s; animation:fadein 0.5s; }
+#page {
+	-webkit-animation:fadein 0.5s; animation:fadein 0.5s;
+}
 @-webkit-keyframes fadein {
     from {opacity:0} to {opacity:1} 
 }
@@ -273,7 +275,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: grey;
+	color: #7a7a7a;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 11px;
 	line-height: 1.4;
@@ -438,8 +440,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
-	border-color: grey;
-	background: grey;
+	border-color: #7a7a7a;
+	background: #7a7a7a;
 	color: white;
 	font-size: 11px;
 	line-height: 1;
@@ -982,7 +984,7 @@ object {
 }
 
 .portfolio-navigation li a{
-    color: grey;
+    color: #7a7a7a;
     font-size: 11px;
 }
 
@@ -1005,7 +1007,7 @@ a.view-all-items{
 }
 
 a.view-all-items:hover{
-    color: grey;    
+    color: #7a7a7a;    
 }
 
 .other-links ul{
@@ -1042,7 +1044,7 @@ a.view-all-items:hover{
 }
 
 .portfolio-archive-page li a{
-    color: grey;
+    color: #7a7a7a;
     padding: 4px 0;    
 }
 
@@ -1119,7 +1121,7 @@ a.view-all-items:hover{
 
 .item-info a{
     font-size: 10px;
-    color: grey;
+    color: #7a7a7a;
 }
 
 .item-info a:hover{
@@ -1171,7 +1173,11 @@ a.send-email{
     font-size: 11px;    
 }
 a.send-email:hover{
-    color: grey;   
+    color: #7a7a7a;   
+}
+
+.entry-footer{
+    display: none; /* show with js when images have loaded to prevent jump */
 }
 
 /*--------------------------------------------------------------
