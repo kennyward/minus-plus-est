@@ -20,6 +20,7 @@
                 <?php if ( has_post_thumbnail() ) { ?>
                 
                             <figure>
+                                <a href="<?php echo the_post_thumbnail_url('full') ?>" class="open-viewer"> 
                 <?php 
                 // check orientation of the_post_thumbnail  
                 $post_thumbnail_id = get_post_thumbnail_id();
@@ -30,7 +31,7 @@
                     echo the_post_thumbnail('item-image-huge', array('class' => 'lead-image portrait'));
                 }      
                 ?>
-                
+                                </a>
                             </figure>
                 <?php } ?>
                 <?php if( get_field('article_text') ): // only show intro if present ?>

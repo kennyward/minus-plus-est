@@ -49,7 +49,7 @@ jQuery( window ).ready(function() {
 
 // chocolat.js - popup gallery on portfolio item pages
 jQuery(document).ready(function(){
-    jQuery('.item-images').Chocolat({
+    jQuery('.entry-content ').Chocolat({
         imageSelector:'.open-viewer',
         enableZoom:false
     });
