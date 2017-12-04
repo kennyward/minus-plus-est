@@ -969,6 +969,7 @@ object {
 
 .portfolio-navigation h2{
     margin-top: 0;
+    text-transform: uppercase;
 }
 
 .portfolio-navigation h3{
