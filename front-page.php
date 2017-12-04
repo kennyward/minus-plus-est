@@ -55,7 +55,7 @@ get_header(); ?>
         if (empty($customLinks)) {} else { 
     ?>                
                     <nav class="other-links">
-                        <h2>More</h2>
+                        <h3>More</h3>
                         <ul>
                             <li>
                                 <a href="<?php echo get_option('mpe_settings')['mpe_text_field_2']; ?>"><?php echo str_replace( 'http://', '', get_option('mpe_settings')['mpe_text_field_3'] ); ?></a>
