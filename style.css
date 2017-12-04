@@ -295,7 +295,7 @@ h2{
     font-size: 12px;
 }
 h3, h4, h5{
-    font-size: 11px;
+    font-size: 10px;
 }
 
 h1.site-title, p.site-title{
@@ -1408,7 +1408,7 @@ body.chocolat-open>.chocolat-content{
         font-size: 13px;
     }
     h3, h4, h5{
-        font-size: 12px;
+        font-size: 11px;
     }
     
     p {
